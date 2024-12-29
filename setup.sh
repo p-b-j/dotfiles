@@ -13,3 +13,5 @@ _link_config_dir "i3status"
 _link_config_dir "Xresources.d"
 
 ln -sf "${PWD}/.Xresources" "${HOME}"
+
+sudo ln -sf "${PWD}/xorg.conf.d"/* "/etc/X11/xorg.conf.d/"
