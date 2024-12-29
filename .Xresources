@@ -1,38 +1,6 @@
 Rxvt.font:xft:Source Code Pro SemiBold:size=12
-*background: #38535C
-*foreground: #C9C8DE
 
-!! black dark/light
-*color0: #2E424D
-*color8: #324954
-
-!! red dark/light
-*color1: #D74E4E
-*color9: #F25858
-
-!! green dark/light
-*color2: #82BD61
-*color10: #95D970
-
-!! yellow dark/light
-*color3: #EBA858
-*color11: #FFB760
-
-!! blue dark/light
-*color4: #007099
-*color12: #00AFB5
-
-!! magenta dark/light
-*color5: #D97EC7
-*color13: #BA6CAB
-
-!! cyan dark/light
-*color6: #72CCAB
-*color14: #81E6C1
-
-!! white dark/light
-*color7: #B6B5C9
-*color15: #C9C8DE
+#include ".config/Xresources.d/dark-colors"
 
 URxvt.scrollBar: false
 URxvt.letterSpace: 1
