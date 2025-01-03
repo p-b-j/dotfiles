@@ -24,3 +24,6 @@ ln -sf "${PWD}/.bashrc" "${HOME}"
 
 # nvim
 _link_config_dir nvim
+
+# tmux
+_link_config_dir tmux
