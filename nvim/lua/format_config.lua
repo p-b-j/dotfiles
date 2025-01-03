@@ -11,6 +11,7 @@ pkg_manager.add_setup_fn(function()
         -- "cmake-format",
         "jq",
         "stylua",
+        "taplo",
     }
 
     for _, formatter in ipairs(formatters) do
@@ -25,6 +26,7 @@ pkg_manager.add_setup_fn(function()
             -- cmake = { "cmake-format" },
             json = { "jq" },
             lua = { "stylua" },
+            toml = { "taplo" },
         },
         format_on_save = {
             timeout_ms = 500,
