@@ -1,8 +1,1 @@
-Rxvt.font:xft:Source Code Pro SemiBold:size=12
-
-#include ".config/Xresources.d/dark-colors"
-
-URxvt.scrollBar: false
-URxvt.letterSpace: 1
-URxvt.saveLines: 50000
 Xft.dpi: 168

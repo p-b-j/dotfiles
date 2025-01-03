@@ -1,0 +1,15 @@
+[general]
+import = ["~/.config/alacritty/everforest-dark.toml"]
+
+[font]
+normal = { family = "Source Code Pro", style = "SemiBold" }
+size = 13
+
+[env]
+term = "xterm-256color"
+
+[keyboard]
+bindings = [
+  { key = "C", mods = "Control|Alt", action = "Copy" },
+  { key = "V", mods = "Control|Alt", action = "Paste" },
+]

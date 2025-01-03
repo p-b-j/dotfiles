@@ -19,6 +19,9 @@ ln -sf "${PWD}/.Xresources" "${HOME}"
 
 sudo ln -sf "${PWD}/xorg.conf.d"/* "/etc/X11/xorg.conf.d/"
 
+# alacritty
+_link_config_dir alacritty
+
 # bash
 ln -sf "${PWD}/.bashrc" "${HOME}"
 
