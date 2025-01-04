@@ -10,6 +10,7 @@ pkg_manager.add_setup_fn(function()
         "clang-format",
         -- "cmake-format",
         "jq",
+        "shfmt",
         "stylua",
         "taplo",
     }
@@ -20,12 +21,14 @@ pkg_manager.add_setup_fn(function()
         end
     end
 
-    require("conform").setup({
+    local conform = require("conform")
+    conform.setup({
         formatters_by_ft = {
             c = { "clang-format" },
             -- cmake = { "cmake-format" },
             json = { "jq" },
             lua = { "stylua" },
+            sh = { "shfmt" },
             toml = { "taplo" },
         },
         format_on_save = {
@@ -33,4 +36,7 @@ pkg_manager.add_setup_fn(function()
             lsp_format = "fallback",
         },
     })
+    conform.formatters.shfmt = {
+        prepend_args = { "-i", "4" },
+    }
 end)
