@@ -1,0 +1,10 @@
+[Unit]
+Description=Redshift color adjustment
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/redshift -l 55.9533:-3.1883
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

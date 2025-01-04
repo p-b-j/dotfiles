@@ -8,6 +8,9 @@ _link_config_dir() {
 	ln -sf "${PWD}/${target_dirname}" "${CONFIG_DIR}"
 }
 
+# systemd
+_link_config_dir systemd
+
 # i3
 _link_config_dir i3
 _link_config_dir i3status
