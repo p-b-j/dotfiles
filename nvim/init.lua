@@ -4,6 +4,7 @@ require("lsp_config")
 require("format_config")
 require("key_config")
 require("color_config")
+require("coauthors")
 
 require("pkg_manager").add_pkgs({
     {
