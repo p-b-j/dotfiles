@@ -1,0 +1,6 @@
+[keyboard]
+bindings = [
+  # this is for my muscle memory - special modifiers for copy/paste to disambiguate from signals
+  { key = "C", mods = "Command|Alt", action = "Copy" },
+  { key = "V", mods = "Command|Alt", action = "Paste" },
+]

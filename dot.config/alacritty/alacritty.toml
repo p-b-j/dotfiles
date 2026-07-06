@@ -1,0 +1,12 @@
+[general]
+import = [
+  "~/.config/alacritty/everforest-dark.toml",
+  "~/.config/system/alacritty/font-size.toml",
+  "~/.config/system/alacritty/keyboard-bindings.toml",
+]
+
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "SemiBold" }
+
+[env]
+term = "xterm-256color"

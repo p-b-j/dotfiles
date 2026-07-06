@@ -1,4 +1,6 @@
-require("pkg_manager").add_setup_fn(function()
+local lsp_helpers = {}
+
+function lsp_helpers.configure_key_bindings()
     vim.api.nvim_create_autocmd("LspAttach", {
         desc = "LSP actions",
         callback = function(event)
@@ -17,10 +19,26 @@ require("pkg_manager").add_setup_fn(function()
             -- vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
         end,
     })
+end
 
-    local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-    vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-    vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-    vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-end)
+return {
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig_defaults = require("lspconfig").util.default_config
+            lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+                "force",
+                lspconfig_defaults.capabilities,
+                require("cmp_nvim_lsp").default_capabilities()
+            )
+
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup({})
+            lspconfig.lexical.setup({
+                cmd = { "lexical" },
+            })
+
+            lsp_helpers.configure_key_bindings()
+        end,
+    },
+}
